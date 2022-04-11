@@ -1,0 +1,59 @@
+/*=============== FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --color1: #7380ec;
+  --color2: #ff7782;
+  --color3: #41f1b6;
+  --color4: #7d8da1;
+  --color5: #ffbb55;
+  --color6: #dce1eb;
+}
+
+/*=============== BASE ===============*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+  appearance: none;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*::selection {
+  background-color: var(--color2);
+}
+
+body {
+  font-family: poppins, sans-serif;
+  font-size: 1rem;
+  color: black;
+  background-color: var(--color6);
+}
+
+/*=============== HEADER ===============*/
+
+/*=============== MAIN ===============*/
+
+/*=============== FOOTER ===============*/
+
+/*=============== RESPONSIVE ===============*/
+@media (min-width: 1441px) {
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+@media (min-width: 425px) and (max-width: 767px) {
+}
+@media (min-width: 375px) and (max-width: 424px) {
+}
+@media (max-width: 374px) {
+}
