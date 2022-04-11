@@ -1,24 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
-    <link rel="shortcut icon" href="" type="image/x-icon">
-    <link rel="stylesheet" href="./assets/css/styles.css">
-</head>
-<body>
-    <header>
+    <link rel="shortcut icon" href="" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
 
+  <body>
+    <header>
+      <section class="top-header">
+        <div>
+          <img id="top-header_logo" src="./assets/img/logofl.png" alt="logo" />
+        </div>
+        <div class="top-header_profil">
+          <div class="top-header_profil-lightDarkMode">
+            <button class="btn-lightMode active">
+              <span class="material-icons-sharp" id="icon-light"
+                >light_mode</span
+              >
+            </button>
+            <button class="btn-darkMode">
+              <span class="material-icons-sharp" id="icon-dark">dark_mode</span>
+            </button>
+          </div>
+          <div class="top-header_profil-user">
+            <p>Hey, <strong>Daniel</strong><br />Admin</p>
+            <img
+              id="top-header_profil-img"
+              src="./assets/img/profile-1.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+      <section class="navigation">
+        <nav>
+          <ul class="menu">
+            <li>
+              <a class="activeNav" href="">
+                <span class="material-icons-sharp">dashboard</span>
+                <h1>Dashboard</h1>
+              </a>
+            </li>
+            <li>
+              <a class="" href="">
+                <span class="material-icons-sharp">person_outline</span>
+                <h1>Customers</h1>
+              </a>
+            </li>
+            <li>
+              <a class="" href="">
+                <span class="material-icons-sharp">receipt_long</span>
+                <h1>Orders</h1>
+              </a>
+            </li>
+            <li>
+              <a class="" href="">
+                <span class="material-icons-sharp">insights</span>
+                <h1>Analytics</h1>
+              </a>
+            </li>
+            <li>
+              <a class="" href="">
+                <span class="material-icons-sharp">mail_outline</span>
+                <h1>Messages</h1>
+              </a>
+            </li>
+            <li>
+              <a class="" href="">
+                <span class="material-icons-sharp">inventory</span>
+                <h1>Products</h1>
+              </a>
+            </li>
+            <li>
+              <a class="" href="">
+                <span class="material-icons-sharp">report_gmailerrorred</span>
+                <h1>Reports</h1>
+              </a>
+            </li>
+            <li>
+              <a class="" href="">
+                <span class="material-icons-sharp" id="navigation_menu-icons">settings</span>
+                <h1>Settings</h1>
+              </a>
+            </li>
+            <li>
+              <a class="" href="">
+                <span class="material-icons-sharp" id="navigation_menu-icons">add</span>
+                <h1>Add Product</h1>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </section>
     </header>
     <main>
-
+        <section class="dashboard">
+            <h2>Dashboard</h2>
+            <input type="date" id="date">
+            <div class="dashboard_3containers">
+                <div class="dashboard_container">
+                    <div class="dashboard_sous-container">
+                        <div class="background-icon-sales">
+                            <span class="material-icons-sharp" id="dashboard-icon">analytics</span> 
+                        </div>
+                        <h3>Total Sales</h3>    
+                        <h4>$25,024</h4>  
+                        <h5>Last 24 Hours</h5>
+                    </div>
+                    <div class="conteneur-graph-sales">
+                        <canvas id="graph-sales"></canvas>
+                    </div>
+                </div>
+                <div class="dashboard_container">
+                    <div class="dashboard_sous-container">
+                        <div class="background-icon-expenses">
+                            <span class="material-icons-sharp" id="dashboard-icon">bar_chart</span> 
+                        </div>
+                        <h3>Total Expenses</h3>    
+                        <h4>$14,160</h4>  
+                        <h5>Last 24 Hours</h5>
+                    </div>
+                    <div class="conteneur-graph-sales">
+                        <canvas id="graph-expenses"></canvas>
+                    </div>
+                </div>
+                <div class="dashboard_container">
+                    <div class="dashboard_sous-container">
+                        <div class="background-icon-income">
+                            <span class="material-icons-sharp" id="dashboard-icon">stacked_line_chart</span> 
+                        </div>
+                        <h3>Total Income</h3>    
+                        <h4>$10,864</h4>  
+                        <h5>Last 24 Hours</h5>
+                    </div>
+                    <div class="conteneur-graph-sales">
+                        <canvas id="graph-income"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer>
-
-    </footer>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="./assets/js/main.js"></script>
-</body>
+    <footer></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
 </html>
