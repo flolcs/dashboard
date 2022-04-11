@@ -19,7 +19,7 @@ const graphSales = document.getElementById("graph-sales").getContext("2d");
 const myChart1 = new Chart(graphSales, {
   type: "doughnut",
   data: {
-    labels: ["Sales", "Goal"],
+    labels: ["Sales", ""],
     datasets: [
       {
         label: "",
@@ -41,7 +41,7 @@ const graphExpenses = document
 const myChart2 = new Chart(graphExpenses, {
   type: "doughnut",
   data: {
-    labels: ["Expenses", "Goal"],
+    labels: ["Expenses", ""],
     datasets: [
       {
         label: "",
@@ -61,7 +61,7 @@ const graphIncome = document.getElementById("graph-income").getContext("2d");
 const myChart3 = new Chart(graphIncome, {
   type: "doughnut",
   data: {
-    labels: ["Income", "Goal"],
+    labels: ["Income", ""],
     datasets: [
       {
         label: "",
