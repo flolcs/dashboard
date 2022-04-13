@@ -80,7 +80,7 @@ body {
 p {
   color: var(--color4);
   text-align: left;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   margin-left: 10px;
 }
 
@@ -182,10 +182,10 @@ h1 {
 /*=============== MAIN ===============*/
 main {
   position: absolute;
-  top: 60px;
+  top: 80px;
   left: 250px;
   height: 85vh;
-  width: 77vw;
+  width: 80vw;
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -208,8 +208,6 @@ h2 {
   border-radius: 10px;
   background-color: rgba(115, 128, 236, 0.2);
   text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
 
 .dashboard {
@@ -217,7 +215,8 @@ h2 {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-around;
-  align-self: flex-end;
+  align-self: flex-start;
+  height: 90%;
 }
 
 .dashboard_3containers {
@@ -235,7 +234,7 @@ h2 {
   justify-content: space-around;
   background-color: white;
   width: 32%;
-  height: 150px;
+  height: 20vh;
   border-radius: 10px;
   filter: drop-shadow(20px 20px 20px rgb(146, 146, 146));
 }
@@ -253,28 +252,28 @@ h2 {
   height: 80px;
 }
 
-.background-icon-sales {
+.background-icon-purple {
   background-color: var(--color1);
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50px;
 }
-.background-icon-expenses {
+.background-icon-red {
   background-color: var(--color2);
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50px;
 }
-.background-icon-income {
+.background-icon-green {
   background-color: var(--color3);
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -284,15 +283,15 @@ h2 {
 #dashboard-icon {
   color: white;
   border-radius: 30px;
-  font-size: 35px;
+  font-size: 25px;
 }
 
 h3 {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 700;
 }
 h4 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 800;
 }
 h5 {
@@ -304,7 +303,8 @@ h5 {
 .updates {
   grid-column: 2;
   grid-row: 1;
-  align-self: flex-end;
+  align-self: flex-start;
+  height: 80%;
 }
 
 h6 {
@@ -320,7 +320,7 @@ h6 {
   align-items: flex-start;
   justify-content: space-around;
   width: 100%;
-  height: 200px;
+  height: 80%;
   border-radius: 10px;
   filter: drop-shadow(20px 20px 20px rgb(146, 146, 146));
 }
@@ -348,7 +348,7 @@ h6 {
 .orders_container {
   background-color: white;
   width: 100%;
-  height: 200px;
+  height: 80%;
   border-radius: 10px;
   filter: drop-shadow(20px 20px 20px rgb(146, 146, 146));
 }
@@ -373,6 +373,7 @@ td {
   line-height: 20px;
   border-bottom: solid 0.5px var(--color4);
   color: var(--color4);
+  line-height: 35px;
 }
 
 #pending {
@@ -388,6 +389,75 @@ td {
   color: var(--color1);
   cursor: pointer;
 }
+
+/*=============== SALES ANALYTICS ===============*/
+.analytics {
+  grid-row: 2;
+  grid-column: 2;
+  height: 90%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.analytics_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+  height: 20%;
+  width: 100%;
+  border-radius: 20px;
+  filter: drop-shadow(10px 10px 10px rgb(146, 146, 146));
+}
+
+#positive-pourcentage {
+  color: var(--color3);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+#negative-pourcentage {
+  color: var(--color2);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.analytics_addProduct {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 20%;
+  width: 100%;
+  border-radius: 20px;
+  border: #7380ec dashed 2px;
+  cursor: pointer;
+}
+
+.analytics_addProduct:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: .5s;
+}
+
+#icon-plus {
+  color: var(--color1);
+  padding-right: 10px;
+}
+
+#addProduct {
+  font-size: 0.9rem;
+  color: var(--color1);
+  font-weight: 600;
+}
+
+
+
+
+
+
 
 
 /*=============== FOOTER ===============*/
