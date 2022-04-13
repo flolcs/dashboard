@@ -9,6 +9,35 @@
   --color4: #7d8da1;
   --color5: #ffbb55;
   --color6: #dce1eb;
+  --color7: rgb(0, 0, 0);
+  --color8: rgb(255, 255, 255);
+  --color9: rgba(115, 128, 236, 0.25);
+  --color10: rgb(155, 154, 154);
+}
+
+.dark-theme {
+  --color1: #7380ec;
+  --color2: #ff7782;
+  --color3: #41f1b6;
+  --color4: #7d8da1;
+  --color5: #ffbb55;
+  --color6: #19191F;
+  --color7: #DDDDE6;
+  --color8: #212429;
+  --color9: rgb(0, 0, 0);
+  --color10: rgb(0, 0, 0);
+}
+.light-theme {
+  --color1: #7380ec;
+  --color2: #ff7782;
+  --color3: #41f1b6;
+  --color4: #7d8da1;
+  --color5: #ffbb55;
+  --color6: #dce1eb;
+  --color7: rgb(0, 0, 0);
+  --color8: rgb(255, 255, 255);
+  --color9: rgba(115, 128, 236, 0.25);
+  --color10: rgb(155, 154, 154);
 }
 
 /*=============== BASE ===============*/
@@ -34,7 +63,7 @@ html {
 body {
   font-family: poppins, sans-serif;
   font-size: 1rem;
-  color: black;
+  color: var(--color7);
   background-color: var(--color6);
 }
 
@@ -85,7 +114,7 @@ p {
 }
 
 strong {
-  color: black;
+  color: var(--color7);
 }
 
 .top-header_profil-lightDarkMode {
@@ -107,6 +136,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--color7);
 }
 
 #icon-dark {
@@ -115,12 +145,12 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--color7);
 }
 
 .active {
   background-color: var(--color1);
   border-radius: 10px;
-  color: white;
 }
 
 /*=============== NAV ===============*/
@@ -164,7 +194,7 @@ h1 {
 
 .activeNav {
   color: var(--color1);
-  background-color: rgba(115, 128, 236, 0.2)
+  background-color: var(--color9);
 }
 .activeNav:hover {
   transform: translateX(0px);
@@ -206,8 +236,9 @@ h2 {
   width: 150px;
   height: 40px;
   border-radius: 10px;
-  background-color: rgba(115, 128, 236, 0.2);
+  background-color: var(--color9);
   text-align: center;
+  color: var(--color4);
 }
 
 .dashboard {
@@ -232,11 +263,11 @@ h2 {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  background-color: white;
+  background-color: var(--color8);
   width: 32%;
   height: 20vh;
   border-radius: 10px;
-  filter: drop-shadow(20px 20px 20px rgb(146, 146, 146));
+  filter: drop-shadow(20px 20px 20px var(--color10));
 }
 
 .dashboard_sous-container {
@@ -281,7 +312,7 @@ h2 {
 
 }
 #dashboard-icon {
-  color: white;
+  color: var(--color8);
   border-radius: 30px;
   font-size: 25px;
 }
@@ -314,7 +345,7 @@ h6 {
 }
 
 .updates_container {
-  background-color: white;
+  background-color: var(--color8);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -322,7 +353,7 @@ h6 {
   width: 100%;
   height: 80%;
   border-radius: 10px;
-  filter: drop-shadow(20px 20px 20px rgb(146, 146, 146));
+  filter: drop-shadow(20px 20px 20px var(--color10));
 }
 
 .updates_sous-containers {
@@ -346,11 +377,11 @@ h6 {
 
 /*=============== RECENT ORDERS ===============*/
 .orders_container {
-  background-color: white;
+  background-color: var(--color8);
   width: 100%;
   height: 80%;
   border-radius: 10px;
-  filter: drop-shadow(20px 20px 20px rgb(146, 146, 146));
+  filter: drop-shadow(20px 20px 20px var(--color10));
 }
 
 table {
@@ -407,11 +438,11 @@ td {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  background-color: white;
+  background-color: var(--color8);
   height: 20%;
   width: 100%;
   border-radius: 20px;
-  filter: drop-shadow(10px 10px 10px rgb(146, 146, 146));
+  filter: drop-shadow(10px 10px 10px var(--color10));
 }
 
 #positive-pourcentage {
@@ -438,8 +469,8 @@ td {
 }
 
 .analytics_addProduct:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-  transition: .5s;
+  background-color: rgba(255, 255, 255, 0.25);
+  transition: 0.5s;
 }
 
 #icon-plus {
@@ -452,11 +483,6 @@ td {
   color: var(--color1);
   font-weight: 600;
 }
-
-
-
-
-
 
 
 

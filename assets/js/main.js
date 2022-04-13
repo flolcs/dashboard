@@ -6,11 +6,16 @@ btnLightMode.addEventListener("click", () => {
   btnLightMode.classList.remove("active");
   btnLightMode.classList.add("active");
   btnDarkMode.classList.remove("active");
+  document.body.classList.toggle("root");
+  document.body.classList.remove("dark-theme");
+  document.body.classList.add("light-theme");
 });
 btnDarkMode.addEventListener("click", () => {
   btnDarkMode.classList.remove("active");
   btnDarkMode.classList.add("active");
   btnLightMode.classList.remove("active");
+  document.body.classList.remove("light-theme");
+  document.body.classList.add("dark-theme");
 });
 
 //Charts.JS
@@ -19,13 +24,13 @@ const graphSales = document.getElementById("graph-sales").getContext("2d");
 const myChart1 = new Chart(graphSales, {
   type: "doughnut",
   data: {
-    labels: ["Sales", ""],
+    labels: ["", ""],
     datasets: [
       {
         label: "",
         data: [81, 19],
-        backgroundColor: ["#7380ec", "#FFFFFF"],
-        borderColor: ["#FFFFFF", "#FFFFFF"],
+        backgroundColor: ["#7380ec", "#7d8da1"],
+        borderColor: ["#7380ec", "#7d8da1"],
       },
     ],
   },
@@ -41,13 +46,13 @@ const graphExpenses = document
 const myChart2 = new Chart(graphExpenses, {
   type: "doughnut",
   data: {
-    labels: ["Expenses", ""],
+    labels: ["", ""],
     datasets: [
       {
         label: "",
         data: [62, 38],
-        backgroundColor: ["#7380ec", "#FFFFFF"],
-        borderColor: ["#FFFFFF", "#FFFFFF"],
+        backgroundColor: ["#7380ec", "#7d8da1"],
+        borderColor: ["#7380ec", "#7d8da1"],
       },
     ],
   },
@@ -61,13 +66,13 @@ const graphIncome = document.getElementById("graph-income").getContext("2d");
 const myChart3 = new Chart(graphIncome, {
   type: "doughnut",
   data: {
-    labels: ["Income", ""],
+    labels: ["", ""],
     datasets: [
       {
         label: "",
         data: [44, 56],
-        backgroundColor: ["#7380ec", "#FFFFFF"],
-        borderColor: ["#FFFFFF", "#FFFFFF"],
+        backgroundColor: ["#7380ec", "#7d8da1"],
+        borderColor: ["#7380ec", "#7d8da1"],
       },
     ],
   },
