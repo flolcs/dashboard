@@ -18,6 +18,8 @@
       <section class="top-header">
         <div>
           <img id="top-header_logo" src="./assets/img/logofl.png" alt="logo" />
+          <span class="material-icons-sharp" id="icon-menu">menu</span>
+          <span class="material-icons-sharp" id="icon-close">close</span>
         </div>
         <div class="top-header_profil">
           <div class="top-header_profil-lightDarkMode">
@@ -29,7 +31,7 @@
             </button>
           </div>
           <div class="top-header_profil-user">
-            <p>Hey, <strong>Daniel</strong><br />Admin</p>
+            <p id="compte-user">Hey, <strong>Daniel</strong><br />Admin</p>
             <img
               id="top-header_profil-img"
               src="./assets/img/profile-1.jpg"
@@ -270,7 +272,15 @@
           </div>
         </section>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="footer_logout">
+        <span class="material-icons-sharp" id="logout">logout</span>
+        <span id="span_footer">Logout</span>
+      </div>
+      <div class="footer_showAll">
+        <span id="span_footer">Show All</span>
+      </div>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
     <script src="./assets/js/main.js"></script>
   </body>
