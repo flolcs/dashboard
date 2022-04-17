@@ -76,7 +76,9 @@ body {
   justify-content: space-between;
   margin-left: 2vw;
   margin-right: 2vw;
-  margin-top: 20px;
+  margin-top: 15px;
+  width: 96vw;
+  height: 70px;
 }
 
 #top-header_logo {
@@ -164,7 +166,7 @@ button {
 /*=============== NAV ===============*/
 .navigation {
   margin-top: 25px;
-  width: 20vh;
+  width: 15vw;
   margin-left: 2vw;
 }
 
@@ -173,6 +175,7 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
+  width: 100%;
 }
 
 li {
@@ -197,6 +200,7 @@ a:hover {
 
 h1 {
   font-weight: 400;
+  font-size: 1.2rem;
   padding-left: 15px;
 }
 
@@ -224,24 +228,21 @@ h1 {
 /*=============== MAIN ===============*/
 main {
   position: absolute;
-  top: 80px;
-  left: 25vh;
-  height: 80vh;
-  width: auto;
+  top: 90px;
+  left: 18vw;
+  height: 85vh;
+  width: 80vw;
   display: grid;
-  grid-template-columns: 3fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  margin-right: 3vw;
-  row-gap: 20px;
-  column-gap: 20px;
+  grid-template-columns: 65% 30%;
+  grid-template-rows: 45% 50%;
+  row-gap: 5%;
+  column-gap: 5%;
 }
 
+/*=============== DASHBOARD ===============*/
 h2 {
   font-weight: 800;
   font-size: 1.8rem;
-  grid-column: 4;
-  grid-row: 1 / 3;
-  position: relative;
 }
 
 #date {
@@ -257,9 +258,12 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-around;
+  justify-content: space-between;
   align-self: flex-start;
-  height: 90%;
+  height: 100%;
+  width: 100%;
+  grid-row: 1;
+  grid-column: 1;
 }
 
 .dashboard_3containers {
@@ -268,6 +272,7 @@ h2 {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  height: 100%;
 }
 
 .dashboard_container {
@@ -347,13 +352,12 @@ h5 {
   grid-column: 2;
   grid-row: 1;
   align-self: flex-start;
-  height: 80%;
+  height: 100%;
 }
 
 h6 {
   font-size: 1.1rem;
   font-weight: 800;
-  margin-bottom: 10px;
 }
 
 .updates_container {
@@ -388,10 +392,17 @@ h6 {
 }
 
 /*=============== RECENT ORDERS ===============*/
+.orders {
+  grid-row: 2;
+  grid-column: 1;
+  height: 100%;
+  width: 100%;
+}
+
 .orders_container {
   background-color: var(--color8);
   width: 100%;
-  height: auto;
+  height: 80%;
   border-radius: 10px;
   filter: drop-shadow(20px 20px 20px var(--color10));
 }
@@ -399,24 +410,23 @@ h6 {
 table {
   text-align: center;
   width: 100%;
+  height: 100%;
   padding-left: 15px;
   padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 th {
   font-size: 0.9rem;
   font-weight: 700;
-  padding-top: 5px;
-  padding-bottom: 5px;
 }
 
 td {
   font-size: 0.7rem;
   font-weight: 300;
-  line-height: 20px;
-  border-bottom: solid 0.5px var(--color4);
+  border-top: solid 0.5px var(--color4);
   color: var(--color4);
-  line-height: 35px;
 }
 
 #pending {
@@ -437,7 +447,7 @@ td {
 .analytics {
   grid-row: 2;
   grid-column: 2;
-  height: 90%;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -500,36 +510,143 @@ td {
 footer {
   position: absolute;
   bottom: 15px;
-  left: 4vw;
-  width: 50%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-#span_footer {
+#footer_text {
   font-size: 0.9rem;
   font-weight: 400;
   color: var(--color4);
-  cursor: pointer;
-}
-
-#logout {
-  color: var(--color4);
-}
-
-.footer_logout {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
 }
 
 /*=============== RESPONSIVE ===============*/
 @media (min-width: 1441px) {
 }
 @media (min-width: 1024px) and (max-width: 1440px) {
+  h1 {
+    font-size: 0.8rem;
+  }
+  .conteneur-graph-sales {
+    width: 60px;
+    height: 60px;
+  }
+  p {
+    font-size: 0.7rem;
+  }
+  .background-icon-red {
+    height: 35px;
+    width: 35px;
+  }
+  .background-icon-purple {
+    height: 35px;
+    width: 35px;
+  }
+  .background-icon-green {
+    height: 35px;
+    width: 35px;
+  }
+  #dashboard-icon {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+  h4 {
+    font-size: 1rem;
+    font-weight: 800;
+  }
+  h5 {
+    font-size: 0.6rem;
+    font-weight: 300;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  h1 {
+    font-size: 0.8rem;
+    display: none;
+  }
+  .conteneur-graph-sales {
+    width: 60px;
+    height: 60px;
+  }
+  p {
+    font-size: 0.7rem;
+  }
+  .background-icon-red {
+    height: 35px;
+    width: 35px;
+  }
+  .background-icon-purple {
+    height: 35px;
+    width: 35px;
+  }
+  .background-icon-green {
+    height: 35px;
+    width: 35px;
+  }
+  #dashboard-icon {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+  h4 {
+    font-size: 1rem;
+    font-weight: 800;
+  }
+  h5 {
+    font-size: 0.6rem;
+    font-weight: 300;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  h6 {
+    font-size: 1rem;
+  }
+  .navigation {
+    margin-top: 25px;
+    width: 7vw;
+    margin-left: 2vw;
+  }
+  a {
+    justify-content: center;
+  }
+  main {
+    left: 12vw;
+    width: 86vw;
+    grid-template-columns: 50% 45%;
+    grid-template-rows: 30% 30% 30%;
+    grid-row-gap: 2%;
+  }
+  .dashboard {
+    grid-row: 1;
+    grid-column: 1 / 3;
+  }
+  .orders {
+    grid-row: 2;
+    grid-column: 1 / 3;
+  }
+  .analytics {
+    grid-row: 3;
+    grid-column: 1;
+  }
+  .updates {
+    grid-row: 3;
+    grid-column: 2;
+  }
+  .dashboard_container {
+    height: 15vh;
+  }
+  .updates_container {
+    height: 100%;
+  } 
+}
+
+@media (min-width: 425px) and (max-width: 767px) {
   h1 {
     font-size: 0.9rem;
   }
@@ -540,282 +657,148 @@ footer {
   p {
     font-size: 0.7rem;
   }
-  main {
-    row-gap: 10px;
-    column-gap: 10px;
-    margin-right: 3vw;
+  .background-icon-red {
+    height: 35px;
+    width: 35px;
+  }
+  .background-icon-purple {
+    height: 35px;
+    width: 35px;
+  }
+  .background-icon-green {
+    height: 35px;
+    width: 35px;
+  }
+  #dashboard-icon {
+    font-size: 20px;
   }
   h3 {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
+    font-weight: 700;
   }
-  .analytics_container {
-    padding-left: 5px;
-    padding-right: 5px;
+  h4 {
+    font-size: 1rem;
+    font-weight: 800;
   }
-  td {
-    line-height: 25px;
+  h5 {
+    font-size: 0.6rem;
+    font-weight: 300;
   }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  h1 {
-    display: none;
+  h2 {
+    font-size: 1.4rem;
   }
-  nav {
-    width: 5vh;
+  h6 {
+    font-size: 1rem;
+  }
+  .navigation {
+    margin-top: 0;
+    margin-left: 0;
   }
   a {
     justify-content: flex-start;
-    padding-left: 25%;
-  }
-  .conteneur-graph-sales {
-    width: 60px;
-    height: 60px;
-  }
-  p {
-    font-size: 0.7rem;
   }
   main {
-    row-gap: 10px;
-    column-gap: 10px;
-    width: 85%;
-    left: 8vh;
-    height: auto;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    margin-right: 3vw;
+    left: 4vw;
+    width: 92vw;
+    grid-template-columns: 100%;
+    grid-template-rows: 30% 30% 17% 17%;
+    grid-row-gap: 2%;
+    height: 200vh;
+    z-index: -1;
   }
   .dashboard {
-    grid-column: 1;
-    grid-row: 1 / 3;
-    justify-content: space-between;
-    height: 100%;
-  }
-  .updates {
-    grid-column: 2;
     grid-row: 1;
-  }
-  .analytics {
-    grid-column: 2;
-    grid-row: 2;
+    grid-column: 1;
   }
   .orders {
-    grid-column: 1 / 3;
-    grid-row: 3;
-  }
-  h3 {
-    font-size: 0.7rem;
-  }
-  .analytics_container {
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-  td {
-    line-height: 25px;
-  }
-
-  #span_footer {
-    visibility: hidden;
-  }
-  .dashboard_3containers {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    height: 80%;
-
-  }
-  .dashboard_container {
-    width: 90%;
-    height: 13vh;
+    grid-row: 2;
+    grid-column: 1;
   }
   .analytics {
-    height: 100%;
+    grid-row: 3;
+    grid-column: 1;
+    align-items: center;
   }
-}
-
-@media (min-width: 425px) and (max-width: 767px) {
+  .updates {
+    grid-row: 4;
+    grid-column: 1;
+  }
+  .dashboard_container {
+    height: 15vh;
+  }
+  .updates_container {
+    height: 100%;
+  } 
+  nav {
+    display: none;
+    background-color: var(--color8);
+    z-index: 1000;
+    height: 100vh;
+    width: 0;
+    animation: navAnim 500ms ease forwards;
+  }
+  @keyframes navAnim {
+    to {
+      width: 60vw;
+    }
+  }
   #top-header_logo {
     display: none;
   }
-  #icon-menu {
-    display: block;
-    font-size: 2rem;
-  }
-  #icon-close {
-    display: block;
-    font-size: 2rem;
-  }
-  #compte-user {
-    display: none;
-  } 
-  .top-header {
-    background-color: var(--color8);
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
-    width: 108%;
-    height: 7vh;
+  .dashboard_3containers {
+    flex-direction: column;
     justify-content: space-around;
   }
-  .top-header_profil-lightDarkMode {
-    margin-left: 50%;
+  .dashboard_container {
+    width: 80%;
   }
-  nav {
-    width: 0vw;
-    height: 195vh;
-    position: absolute;
-    top: 7vh;
-    left: 0vw;
-    background-color: var(--color8);
-    display: none;
-    z-index: 1000;
-    animation: animNav 500ms ease forwards;
+  th {
+    font-size: 0.8rem;
   }
-
-  @keyframes animNav {
-    to {
-      width: 70vw;
-    }
-    
+  .orders_container {
+    height: 90%;
   }
-
-  a {
-    justify-content: flex-start;
-    width: 85%;
-  }
-  main {
-    width: 100%;
-    left: 3vw;
-    margin-left: 3vw;
-    margin-right: 3vw;
-    grid-template-columns: 1fr;
-    grid-template-rows: 40% 20% 30% 20%;
-    row-gap: 10px;
-    column-gap: 10px;
-    height: 150vh;
-    z-index: -1;
-  }
-  .conteneur-graph-sales {
-    width: 60px;
-    height: 60px;
-  }
-  p {
-    font-size: 0.7rem;
-  }
-  .dashboard {
-    grid-column: 1;
-    grid-row: 1;
-    justify-content: space-between;
-    align-items: center;
-    height: 55vh;
-    width: 100%;
-  }
-  .updates {
-    grid-column: 1;
-    grid-row: 2;
-    height: 25vh;
-    width: 97%;
-  }
-  .analytics {
-    grid-column: 1;
-    grid-row: 3;
-    height: 100%;
-    width: 97%;
-  }
-  .orders {
-    grid-column: 1;
-    grid-row: 4;
-    height: 100%;
-    width: 97%;
-  }
-  h3 {
-    font-size: 0.7rem;
+  .updates_container {
+    height: 80%;
   }
   .analytics_container {
-    padding-left: 5px;
-    padding-right: 5px;
+    width: 90%;
   }
-  td {
-    line-height: 25px;
-  }
-  .dashboard_3containers {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 80%;
-    width: 75%;
-  }
-  .dashboard_container {
-    width: 100%;
-    align-items: center;
-    height: 13vh;
+  .analytics_addProduct {
+    width: 90%;
   }
   footer {
-    display: none;
+    position: relative;
+    top: 200vh;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #footer_text {
+    font-size: 0.7rem;
+    padding-bottom: 15px;
+  }
+  .top-header {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    width: 100vw;
+    background-color: var(--color8);
+  }
+  .top-header_profil {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 220px;
   }
 }
 @media (min-width: 375px) and (max-width: 424px) {
-  #top-header_logo {
-    display: none;
-  }
-  #icon-menu {
-    display: block;
-    font-size: 2rem;
-  }
-  #icon-close {
-    display: block;
-    font-size: 2rem;
-  }
-  #compte-user {
-    display: none;
-  } 
-  .top-header {
-    background-color: var(--color8);
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
-    width: 108%;
-    height: 7vh;
-    justify-content: space-around;
-  }
-  .top-header_profil-lightDarkMode {
-    margin-left: 50%;
-  }
-  nav {
-    width: 0vw;
-    height: 195vh;
-    position: absolute;
-    top: 7vh;
-    left: 0vw;
-    background-color: var(--color8);
-    display: none;
-    z-index: 1000;
-    animation: animNav 500ms ease forwards;
-  }
-
-  @keyframes animNav {
-    to {
-      width: 70vw;
-    }
-    
-  }
-
-  a {
-    justify-content: flex-start;
-    width: 85%;
-  }
-  main {
-    width: 100%;
-    left: 3vw;
-    margin-left: 3vw;
-    margin-right: 3vw;
-    grid-template-columns: 1fr;
-    grid-template-rows: 40% 20% 30% 20%;
-    row-gap: 10px;
-    column-gap: 10px;
-    height: 150vh;
-    z-index: -1;
+  h1 {
+    font-size: 0.9rem;
   }
   .conteneur-graph-sales {
     width: 60px;
@@ -824,120 +807,148 @@ footer {
   p {
     font-size: 0.7rem;
   }
-  .dashboard {
-    grid-column: 1;
-    grid-row: 1;
-    justify-content: space-between;
-    align-items: center;
-    height: 55vh;
-    width: 100%;
+  .background-icon-red {
+    height: 35px;
+    width: 35px;
   }
-  .updates {
-    grid-column: 1;
-    grid-row: 2;
-    height: 25vh;
-    width: 97%;
+  .background-icon-purple {
+    height: 35px;
+    width: 35px;
   }
-  .analytics {
-    grid-column: 1;
-    grid-row: 3;
-    height: 100%;
-    width: 97%;
+  .background-icon-green {
+    height: 35px;
+    width: 35px;
   }
-  .orders {
-    grid-column: 1;
-    grid-row: 4;
-    height: 100%;
-    width: 97%;
+  #dashboard-icon {
+    font-size: 20px;
   }
   h3 {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
+    font-weight: 700;
   }
-  .analytics_container {
-    padding-left: 5px;
-    padding-right: 5px;
+  h4 {
+    font-size: 1rem;
+    font-weight: 800;
   }
-  td {
-    line-height: 25px;
+  h5 {
+    font-size: 0.6rem;
+    font-weight: 300;
   }
-  .dashboard_3containers {
-    display: flex;
-    flex-direction: column;
+  h2 {
+    font-size: 1.4rem;
+  }
+  h6 {
+    font-size: 1rem;
+  }
+  .navigation {
+    margin-top: 0;
+    margin-left: 0;
+  }
+  a {
+    justify-content: flex-start;
+  }
+  main {
+    left: 4vw;
+    width: 92vw;
+    grid-template-columns: 100%;
+    grid-template-rows: 30% 30% 17% 17%;
+    grid-row-gap: 2%;
+    height: 200vh;
+    z-index: -1;
+  }
+  .dashboard {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .orders {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  .analytics {
+    grid-row: 3;
+    grid-column: 1;
     align-items: center;
-    justify-content: space-between;
-    height: 80%;
-    width: 75%;
+  }
+  .updates {
+    grid-row: 4;
+    grid-column: 1;
   }
   .dashboard_container {
-    width: 100%;
-    align-items: center;
-    height: 13vh;
+    height: 15vh;
+  }
+  .updates_container {
+    height: 100%;
+  } 
+  nav {
+    display: none;
+    background-color: var(--color8);
+    z-index: 1000;
+    height: 100vh;
+    width: 0;
+    animation: navAnim 500ms ease forwards;
+  }
+  @keyframes navAnim {
+    to {
+      width: 60vw;
+    }
+  }
+  #top-header_logo {
+    display: none;
+  }
+  .dashboard_3containers {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .dashboard_container {
+    width: 80%;
+  }
+  th {
+    font-size: 0.8rem;
+  }
+  .orders_container {
+    height: 90%;
+  }
+  .updates_container {
+    height: 80%;
+  }
+  .analytics_container {
+    width: 90%;
+  }
+  .analytics_addProduct {
+    width: 90%;
   }
   footer {
-    display: none;
+    position: relative;
+    top: 200vh;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #footer_text {
+    font-size: 0.7rem;
+    padding-bottom: 15px;
+  }
+  .top-header {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    width: 100vw;
+    background-color: var(--color8);
+  }
+  .top-header_profil {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 220px;
   }
 }
 @media (max-width: 374px) {
-  #top-header_logo {
-    display: none;
-  }
-  #icon-menu {
-    display: block;
-    font-size: 2rem;
-  }
-  #icon-close {
-    display: block;
-    font-size: 2rem;
-  }
-  #compte-user {
-    display: none;
-  } 
-  .top-header {
-    background-color: var(--color8);
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
-    width: 108%;
-    height: 7vh;
-    justify-content: space-around;
-  }
-  .top-header_profil-lightDarkMode {
-    margin-left: 50%;
-  }
-  nav {
-    width: 0vw;
-    height: 195vh;
-    position: absolute;
-    top: 7vh;
-    left: 0vw;
-    background-color: var(--color8);
-    display: none;
-    z-index: 1000;
-    animation: animNav 500ms ease forwards;
-  }
-
-  @keyframes animNav {
-    to {
-      width: 70vw;
-    }
-    
-  }
-
-  a {
-    justify-content: flex-start;
-    width: 85%;
-  }
-  main {
-    width: 100%;
-    left: 3vw;
-    margin-left: 3vw;
-    margin-right: 3vw;
-    grid-template-columns: 1fr;
-    grid-template-rows: 40% 20% 30% 20%;
-    row-gap: 10px;
-    column-gap: 10px;
-    height: 150vh;
-    z-index: -1;
+  h1 {
+    font-size: 0.9rem;
   }
   .conteneur-graph-sales {
     width: 60px;
@@ -946,56 +957,142 @@ footer {
   p {
     font-size: 0.7rem;
   }
-  .dashboard {
-    grid-column: 1;
-    grid-row: 1;
-    justify-content: space-between;
-    align-items: center;
-    height: 55vh;
-    width: 100%;
+  .background-icon-red {
+    height: 35px;
+    width: 35px;
   }
-  .updates {
-    grid-column: 1;
-    grid-row: 2;
-    height: 25vh;
-    width: 97%;
+  .background-icon-purple {
+    height: 35px;
+    width: 35px;
   }
-  .analytics {
-    grid-column: 1;
-    grid-row: 3;
-    height: 100%;
-    width: 97%;
+  .background-icon-green {
+    height: 35px;
+    width: 35px;
   }
-  .orders {
-    grid-column: 1;
-    grid-row: 4;
-    height: 100%;
-    width: 97%;
+  #dashboard-icon {
+    font-size: 20px;
   }
   h3 {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
+    font-weight: 700;
   }
-  .analytics_container {
-    padding-left: 5px;
-    padding-right: 5px;
+  h4 {
+    font-size: 1rem;
+    font-weight: 800;
   }
-  td {
-    line-height: 25px;
+  h5 {
+    font-size: 0.6rem;
+    font-weight: 300;
   }
-  .dashboard_3containers {
-    display: flex;
-    flex-direction: column;
+  h2 {
+    font-size: 1.4rem;
+  }
+  h6 {
+    font-size: 1rem;
+  }
+  .navigation {
+    margin-top: 0;
+    margin-left: 0;
+  }
+  a {
+    justify-content: flex-start;
+  }
+  main {
+    left: 4vw;
+    width: 92vw;
+    grid-template-columns: 100%;
+    grid-template-rows: 30% 30% 17% 17%;
+    grid-row-gap: 2%;
+    height: 200vh;
+    z-index: -1;
+  }
+  .dashboard {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .orders {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  .analytics {
+    grid-row: 3;
+    grid-column: 1;
     align-items: center;
-    justify-content: space-between;
-    height: 80%;
-    width: 75%;
+  }
+  .updates {
+    grid-row: 4;
+    grid-column: 1;
   }
   .dashboard_container {
-    width: 100%;
-    align-items: center;
-    height: 13vh;
+    height: 15vh;
+  }
+  .updates_container {
+    height: 100%;
+  } 
+  nav {
+    display: none;
+    background-color: var(--color8);
+    z-index: 1000;
+    height: 100vh;
+    width: 0;
+    animation: navAnim 500ms ease forwards;
+  }
+  @keyframes navAnim {
+    to {
+      width: 60vw;
+    }
+  }
+  #top-header_logo {
+    display: none;
+  }
+  .dashboard_3containers {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .dashboard_container {
+    width: 80%;
+  }
+  th {
+    font-size: 0.8rem;
+  }
+  .orders_container {
+    height: 90%;
+  }
+  .updates_container {
+    height: 80%;
+  }
+  .analytics_container {
+    width: 90%;
+  }
+  .analytics_addProduct {
+    width: 90%;
   }
   footer {
-    display: none;
+    position: relative;
+    top: 200vh;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #footer_text {
+    font-size: 0.7rem;
+    padding-bottom: 15px;
+  }
+  .top-header {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    width: 100vw;
+    background-color: var(--color8);
+  }
+  .top-header_profil {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 220px;
   }
 }
