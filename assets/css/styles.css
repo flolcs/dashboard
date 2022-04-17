@@ -564,6 +564,18 @@ footer {
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
+  .dashboard_container {
+    filter: none;
+  }
+  .orders_container {
+    filter: none;
+  }
+  .analytics_container {
+    filter: none;
+  }
+  .updates_container {
+    filter: none;
+  }
   h1 {
     font-size: 0.8rem;
     display: none;
@@ -648,6 +660,18 @@ footer {
 }
 
 @media (min-width: 425px) and (max-width: 767px) {
+  .dashboard_container {
+    filter: none;
+  }
+  .orders_container {
+    filter: none;
+  }
+  .analytics_container {
+    filter: none;
+  }
+  .updates_container {
+    filter: none;
+  }
   h1 {
     font-size: 0.9rem;
   }
@@ -798,6 +822,18 @@ footer {
   }
 }
 @media (min-width: 375px) and (max-width: 424px) {
+  .dashboard_container {
+    filter: none;
+  }
+  .orders_container {
+    filter: none;
+  }
+  .analytics_container {
+    filter: none;
+  }
+  .updates_container {
+    filter: none;
+  }
   h1 {
     font-size: 0.9rem;
   }
@@ -948,6 +984,18 @@ footer {
   }
 }
 @media (max-width: 374px) {
+  .dashboard_container {
+    filter: none;
+  }
+  .orders_container {
+    filter: none;
+  }
+  .analytics_container {
+    filter: none;
+  }
+  .updates_container {
+    filter: none;
+  }
   h1 {
     font-size: 0.9rem;
   }
