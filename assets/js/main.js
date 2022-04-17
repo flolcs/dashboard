@@ -80,3 +80,46 @@ const myChart3 = new Chart(graphIncome, {
     plugins: { legend: { display: false } },
   },
 });
+
+// NAV ET MENU
+// Menu
+const toggleMenu = document.querySelector("#icon-menu");
+const toggleCloseMenu = document.querySelector("#icon-close");
+const sousMenu = document.querySelector("nav");
+
+if (document.documentElement.clientWidth < 768) {
+  sousMenu.style.display = "none";
+  toggleCloseMenu.style.display = "none";
+  toggleMenu.style.display = "block";
+} else {
+  sousMenu.style.display = "block";
+  toggleCloseMenu.style.display = "none";
+  toggleMenu.style.display = "none";
+}
+
+toggleMenu.addEventListener("click", () => {
+  sousMenu.style.display = "block";
+  sousMenu.style.left = "0";
+  toggleMenu.style.display = "none";
+  toggleCloseMenu.style.display = "block";
+});
+
+toggleCloseMenu.addEventListener("click", () => {
+  sousMenu.style.display = "none";
+  toggleMenu.style.display = "block";
+  toggleCloseMenu.style.display = "none";
+});
+
+// ScrollReveal
+const sr = ScrollReveal({
+  origin: "top",
+  distance: "50px",
+  duration: 2000,
+  delay: 400,
+  //reset: true
+});
+
+sr.reveal(".dashboard", { origin: "left" });
+sr.reveal(".updates", { origin: "right" });
+sr.reveal(".orders", { origin: "bottom" });
+sr.reveal(".analytics", { origin: "right" });
