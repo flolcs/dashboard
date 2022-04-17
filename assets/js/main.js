@@ -119,7 +119,7 @@ const sr = ScrollReveal({
   //reset: true
 });
 
-sr.reveal(".dashboard", { origin: "left" });
-sr.reveal(".updates", { origin: "right" });
+sr.reveal(".dashboard", { origin: "top" });
+sr.reveal(".updates", { origin: "top" });
 sr.reveal(".orders", { origin: "bottom" });
-sr.reveal(".analytics", { origin: "right" });
+sr.reveal(".analytics", { origin: "bottom" });
